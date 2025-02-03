@@ -1,0 +1,176 @@
+{
+  "item": {
+    "system": {
+      "id": "9a261ecb-3aec-4a19-96c1-77c3d307bbc5",
+      "name": "Welcome Aus - Technical Test - Mobile Dev",
+      "codename": "welcome_aus___technical_test___mobile_dev",
+      "language": "en-US",
+      "type": "mobile_dev___technical_test",
+      "collection": "default",
+      "sitemap_locations": [],
+      "last_modified": "2025-01-23T02:28:03.508674Z",
+      "workflow": "default",
+      "workflow_step": "published"
+    },
+    "elements": {
+      "title_page": {
+        "type": "text",
+        "name": "Title Page",
+        "value": "Welcome to Australia"
+      },
+      "banner_image": {
+        "type": "asset",
+        "name": "Banner Image",
+        "value": [
+          {
+            "name": "banner-image.jpg",
+            "description": null,
+            "type": "image/jpeg",
+            "size": 4659838,
+            "url": "https://assets-au-01.kc-usercontent.com:443/dabf51d1-80d7-028c-004c-61b8839f9622/9b835c39-8c31-47f7-855a-5a437bb0dba9/banner-image.jpg",
+            "width": 6720,
+            "height": 4480,
+            "renditions": {}
+          }
+        ]
+      },
+      "untitled_linked_items": {
+        "type": "modular_content",
+        "name": "Unique Value",
+        "value": [
+          "technical_test___mobile_dev___page_item_1",
+          "technical_test___mobile_dev___page_item_2",
+          "technical_test___mobile_dev___page_item_3"
+        ]
+      }
+    }
+  },
+  "modular_content": {
+    "technical_test___mobile_dev___page_item_1": {
+      "system": {
+        "id": "2bc15a3b-8dd2-4f2a-8682-b298d00bdded",
+        "name": "Technical Test - Mobile Dev - Page Item 1",
+        "codename": "technical_test___mobile_dev___page_item_1",
+        "language": "en-US",
+        "type": "page_item___mobile_dev___technical_test",
+        "collection": "default",
+        "sitemap_locations": [],
+        "last_modified": "2025-01-23T02:19:25.3726056Z",
+        "workflow": "default",
+        "workflow_step": "published"
+      },
+      "elements": {
+        "title": {
+          "type": "text",
+          "name": "Title",
+          "value": "Unique Wildlife"
+        },
+        "description": {
+          "type": "text",
+          "name": "Description",
+          "value": "Australia is home to unique animals like kangaroos, koalas, and platypuses. The country also has a diverse ecosystem, including the Great Barrier Reef, the largest coral reef system in the world"
+        },
+        "icon": {
+          "type": "asset",
+          "name": "Icon",
+          "value": [
+            {
+              "name": "deer.png",
+              "description": null,
+              "type": "image/png",
+              "size": 17703,
+              "url": "https://assets-au-01.kc-usercontent.com:443/dabf51d1-80d7-028c-004c-61b8839f9622/60a5980e-162a-427f-9b45-dab8832d0c63/deer.png",
+              "width": 512,
+              "height": 512,
+              "renditions": {}
+            }
+          ]
+        }
+      }
+    },
+    "technical_test___mobile_dev___page_item_2": {
+      "system": {
+        "id": "00ca7b7d-f0d4-449b-945d-ec1ee6604693",
+        "name": "Technical Test - Mobile Dev - Page Item 2",
+        "codename": "technical_test___mobile_dev___page_item_2",
+        "language": "en-US",
+        "type": "page_item___mobile_dev___technical_test",
+        "collection": "default",
+        "sitemap_locations": [],
+        "last_modified": "2025-01-23T02:20:34.6445344Z",
+        "workflow": "default",
+        "workflow_step": "published"
+      },
+      "elements": {
+        "title": {
+          "type": "text",
+          "name": "Title",
+          "value": "Indigenous Culture"
+        },
+        "description": {
+          "type": "text",
+          "name": "Description",
+          "value": "Australia has a rich Indigenous history and culture, with the Aboriginal and Torres Strait Islander peoples being the original inhabitants. Their art, music (e.g., the didgeridoo), and Dreamtime stories are central to the nation’s heritage."
+        },
+        "icon": {
+          "type": "asset",
+          "name": "Icon",
+          "value": [
+            {
+              "name": "cultural-diversity.png",
+              "description": null,
+              "type": "image/png",
+              "size": 18765,
+              "url": "https://assets-au-01.kc-usercontent.com:443/dabf51d1-80d7-028c-004c-61b8839f9622/63177720-fba1-4a88-be19-342dc5af7fe6/cultural-diversity.png",
+              "width": 512,
+              "height": 512,
+              "renditions": {}
+            }
+          ]
+        }
+      }
+    },
+    "technical_test___mobile_dev___page_item_3": {
+      "system": {
+        "id": "95771d44-4119-42aa-b914-3b181b08b742",
+        "name": "Technical Test - Mobile Dev - Page Item 3",
+        "codename": "technical_test___mobile_dev___page_item_3",
+        "language": "en-US",
+        "type": "page_item___mobile_dev___technical_test",
+        "collection": "default",
+        "sitemap_locations": [],
+        "last_modified": "2025-01-23T02:21:20.9925724Z",
+        "workflow": "default",
+        "workflow_step": "published"
+      },
+      "elements": {
+        "title": {
+          "type": "text",
+          "name": "Title",
+          "value": "Iconic Landmarks"
+        },
+        "description": {
+          "type": "text",
+          "name": "Description",
+          "value": "Australia boasts world-famous landmarks such as the Sydney Opera House, Uluru (Ayers Rock), and the Twelve Apostles along the Great Ocean Road."
+        },
+        "icon": {
+          "type": "asset",
+          "name": "Icon",
+          "value": [
+            {
+              "name": "location-pin.png",
+              "description": null,
+              "type": "image/png",
+              "size": 22901,
+              "url": "https://assets-au-01.kc-usercontent.com:443/dabf51d1-80d7-028c-004c-61b8839f9622/f34d69dc-b39e-4ae7-bede-86ea333edfc8/location-pin.png",
+              "width": 512,
+              "height": 512,
+              "renditions": {}
+            }
+          ]
+        }
+      }
+    }
+  }
+}

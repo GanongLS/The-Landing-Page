@@ -1,97 +1,81 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# The Landing Page App
 
-# Getting Started
+This App being developed by Luki Subandi. I intend to license this App under MIT License.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+Fork or clone this repository to your personal repository.
 
-## Step 1: Start Metro
+## How to run the App:
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+1. Setup React Native Environment in your personal PC based on this guide: https://reactnative.dev/docs/environment-setup.
+2. Open your remote personal repository that held the codebase for this up.
+3. In the root folder run this int your terminal/command cli:
+   1. Run `npm install` or `yarn`.
+   2. Then run `react-native start` or `yarn start`.
+   3. Then run `react-native run-android` or `yarn run-android`
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+In the Linux based OS you may find npm not running as expected you may need `npx react-native start` then `npx react-native run-android`.
 
-```sh
-# Using npm
-npm start
+If you find some error feel free to open issues.
 
-# OR using Yarn
-yarn start
-```
+Happy Hacking.
 
-## Step 2: Build and run your app
+-@ganLS-
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+---
 
-### Android
+## How to create Debug APK
 
-```sh
-# Using npm
-npm run android
+copy the following command and paste in the terminal in the main folder
 
-# OR using Yarn
-yarn android
-```
+`react-native bundle --dev false --platform android --entry-file index.js --bundle-output ./android/app/src/main/assets/index.android.bundle --assets-dest ./android/app/src/main/res`
 
-### iOS
+or
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+`react-native bundle --dev false --platform android --entry-file index.js --bundle-output ./android/app/build/intermediates/assets/debug/index.android.bundle --assets-dest ./android/app/build/intermediates/res/merged/debug`
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+In the case of Linux OS, it is necessary to add yarn/npx in front of the command, but this is not necessary on other OS.
 
-```sh
-bundle install
-```
+If there are any problems due to the Enoent error, try creating the folder with
+`mkdir android/app/src/main/assets`
 
-Then, and every time you update your native dependencies, run:
+after finished
+#Open android file
+`cd android`
 
-```sh
-bundle exec pod install
-```
+#Create debug build:
+`./gradlew assembleDebug`
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+#Create release build:
+`./gradlew assembleRelease`
 
-```sh
-# Using npm
-npm run ios
+apk debug ada pada
+`cd app/build/outputs/apk/debug`
 
-# OR using Yarn
-yarn ios
-```
+---
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+This repository was created to fulfill the test assessment to enter the Luminary as mobile Front End Development team. 
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+Catatan dalam Pengembangan:
+1. 
 
-## Step 3: Modify your app
+---
 
-Now that you have successfully run the app, let's make changes!
+React Context Provider
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+Why did I choose to use React.Context + React.useReducer over react-redux? The most practical reason is because I am already familiar with this state management. However, there are many other technical reasons, such as:
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+1. react.context + react.useReducer was created by the developer who created redux, so it can be said that the API of react.context + useReducer is better maintained, easier to use and has less boiler plate and middleware.
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+2. No need to install additional packages, the fewer third party packages, the easier it is to maintain work/projects.
 
-## Congratulations! :tada:
+3. Can create multi stores without much boilerplate. I have created applications with more than 40 react.context.providers. And it still runs very light. The downside of applications with one global state store is that there is a lot of middleware, nesting state and boilerplate.
 
-You've successfully run and modified your React Native App. :partying_face:
+4. react.context + react.useProvider are directly maintained by the React developer team so the possibility of unmaintained APIs, major (or minor) upgrade conflicts and other incompatibilities from version changes is very small.
 
-### Now what?
+I have used react-redux in my career, I studied it for about 2 full weeks. It only took me 3 days to understand react.context. From my subjective point of view, if I want to work on a personal project using react.js or react-native I will always prioritize react.context + react.useReducer over react-redux. However, in my work I will still follow the framework that is widely used by the team or the framework required by the company.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+Like my experience now I am working with the Flutter/Dart framework using BLoC. I was initially more fluent in using Provider, but after 1.5 years of using BLoC I can say that I am more fluent in using BLoC. Likewise with redux, if I use it for 1.5 years I will most likely understand it better.
 
-# Troubleshooting
+In addition, development using react-redux is not much different from react.useReducer, only different at the middleware level used as a state distributor, so it will be easier for me to implement it.
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+-Luki Subandi-
