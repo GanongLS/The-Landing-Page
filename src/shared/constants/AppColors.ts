@@ -19,6 +19,7 @@ const AppColors = {
   //dika
   orange: '#f26641',
   orange2: '#FEA33D',
+  grayF8: '#f8f8f8',
   grayF4: '#f4f4f4',
   grayEE: '#eeeeee',
   grayDD: '#dddddd',

@@ -7,17 +7,16 @@ export interface GradientProps {
   style?: ViewStyle;
 }
 
-const BlackGradient = memo((props:PropsWithChildren<GradientProps>) => {
+const BlackGradient = memo((props: PropsWithChildren<GradientProps>) => {
   const {height, style, ...attr} = props;
   return (
     <LinearGradient
       {...attr}
-      colors={['transparent', '#000000']}
-      start={{x: 0.5, y: 0.7}}
-      end={{x: 0.5, y: 0.9}}
+      colors={['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0.6)']}
+      start={{x: 0.5, y: 0.5}}
+      end={{x: 0.5, y: 1}}
       style={{
         ...gradientStyle.container,
-        // height: height ? height : screenHeight * 0.065,
         height: height ? height : '100%',
         ...style,
       }}>
@@ -35,7 +34,6 @@ const DetailsGradient = memo((props: PropsWithChildren<GradientProps>) => {
       end={{x: 0.5, y: 0.95}}
       style={{
         ...gradientStyle.container,
-        // height: height ? height : screenHeight * 0.065,
         height: height ? height : '100%',
         ...style,
       }}>
@@ -47,9 +45,6 @@ const DetailsGradient = memo((props: PropsWithChildren<GradientProps>) => {
 const gradientStyle = StyleSheet.create({
   container: {
     width: '100%',
-    zIndex: 0,
-    position: 'absolute',
-    bottom: 0,
   },
 });
 
